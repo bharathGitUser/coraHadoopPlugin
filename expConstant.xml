@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Constant>
+    <mapTaskTime>
+        <Type>Integer</Type>
+        <Value>180</Value>
+        <Description>Time it takes to complete a Map task.</Description>
+    </mapTaskTime>
+    <redTaskRequest>
+        <Type>Integer</Type>
+        <Value>20</Value>
+        <Description>Number of Reduce tasks that will be created for a job.</Description>
+    </redTaskRequest>
+    <totalMapSlotsInCluster>
+        <Type>Integer</Type>
+        <Value>40</Value>
+        <Description>Number of Map solts in the cluster.</Description>
+    </totalMapSlotsInCluster>
+    <minimumDeadline>
+        <Type>Integer</Type>
+        <Value>210</Value>
+        <Description>The minimum deadline that a job can have. Should be larger than one MaptaskTime.</Description>
+    </minimumDeadline>
+    <mapTaskRequest>
+        <Type>Integer</Type>
+        <Value>100</Value>
+        <Description>Number of Map tasks that will be created for a job.</Description>
+    </mapTaskRequest>
+    <maxClusters>
+        <Type>Integer</Type>
+        <Value>2</Value>
+        <Description>The number of classification clusters. For jobs KMean and Classification.</Description>
+    </maxClusters>
+    <numOfQueues>
+        <Type>Integer</Type>
+        <Value>10</Value>
+        <Description>The number of simultaneous jobs that can be processed.</Description>
+    </numOfQueues>
+    <totalReduceSlotsInCluster>
+        <Type>Integer</Type>
+        <Value>40</Value>
+        <Description>Number of Reduce solts in the cluster.</Description>
+    </totalReduceSlotsInCluster>
+    <expConstant>
+        <Type>Double</Type>
+        <Value>8.0</Value>
+        <Description>The Lambda vaue used in the exp barrier function.</Description>
+    </expConstant>
+    <gamma_hard>
+        <Type>Double</Type>
+        <Value>5.0</Value>
+        <Description>Hard Deadline Gamma parameter for approximation of the logistic utility function</Description>
+    </gamma_hard>
+    <division>
+        <Type>Double</Type>
+        <Value>0.5</Value>
+        <Description>For jobs KMean and Classification.</Description>
+    </division>
+    <gamma_no>
+        <Type>Double</Type>
+        <Value>0.0</Value>
+        <Description>Gamma parameter for deadline insensitive jobs</Description>
+    </gamma_no>
+    <priorityRange>
+        <Type>Double</Type>
+        <Value>5.0</Value>
+        <Description>The maximum value of job piority.</Description>
+    </priorityRange>
+    <expOffset>
+        <Type>Double</Type>
+        <Value>14.0</Value>
+        <Description>The offset used to prevent the objective value from overflow.</Description>
+    </expOffset>
+    <gamma_soft>
+        <Type>Double</Type>
+        <Value>0.04</Value>
+        <Description>Soft Deadline Gamma parameter for approximation of the logistic utility function</Description>
+    </gamma_soft>
+    <SmallestGCF>
+	<Type>Integer</Type>
+	<Value>10</Value>
+	<Description>The smallest unit of time slot in the Max-min fair scheduling.</Description>
+    </SmallestGCF>
+ <WeightUpdateAggregationTime>
+        <Type>Integer</Type>
+        <Value>1</Value>
+        <Description>Time within which multiple weight update requests are aggregated together.In the unit of seconds.</Description>
+    </WeightUpdateAggregationTime>
+<EnableDynamicDeadlineInjection>
+ <Type>Boolean</Type>
+        <Value>true</Value>
+        <Description>Whether allow MMF scheduler to determine deadline of jobs to better fit the result.</Description>
+</EnableDynamicDeadlineInjection>
+<EnableMosekDebugOutput>
+ <Type>Boolean</Type>
+        <Value>false</Value>
+        <Description>Whether output Mosek result.</Description>
+</EnableMosekDebugOutput>
+<JobStatusCallbackAddress>
+        <Type>String</Type>
+        <Value>master</Value>
+        <Description>The address of the Job status callback server.</Description>
+    </JobStatusCallbackAddress>
+    <logFileName>
+        <Type>String</Type>
+        <Value>/usr/local/hadoop/logs/hadoop-hduser-jobtracker-hadoop-master.log</Value>
+        <Description>Job profile desciption file location.</Description>
+    </logFileName>
+    <strModelFile>
+        <Type>String</Type>
+        <Value>/usr/local/hadoop/initial_centroids</Value>
+        <Description>Location of the centroids template. For jobs KMean and Classification.</Description>
+    </strModelFile>
+    <GeneralLog>
+        <Type>String</Type>
+        <Value>/home/hduser/log/expmanager.log</Value>
+        <Description>General log file location.</Description>
+    </GeneralLog>
+    <pathToInputFilesBase>
+        <Type>String</Type>
+        <Value>hdfs://master:54310/user/hduser/data/</Value>
+        <Description>The location in HDFS where the input files are present. </Description>
+    </pathToInputFilesBase>
+    <runtimeLog>
+        <Type>String</Type>
+        <Value>/home/hduser/log/RunTime.log</Value>
+        <Description>RunTime log file location.</Description>
+    </runtimeLog>
+    <UtilityLog>
+        <Type>String</Type>
+        <Value>/home/hduser/log/utility.log</Value>
+        <Description>Utility log file location.</Description>
+    </UtilityLog>
+ 
+
+<timelineLog>
+        <Type>String</Type>
+        <Value>/home/hduser/log/Timeline.log</Value>
+        <Description>Timeline log file location.</Description>
+    </timelineLog>
+    <pathToOutputFilesBase>
+        <Type>String</Type>
+        <Value>hdfs://master:54310/user/hduser/output/</Value>
+        <Description>The location in HDFS where output files must be written to.</Description>
+    </pathToOutputFilesBase>
+    <hadoopHome>
+        <Type>String</Type>
+        <Value>/usr/local/hadoop/</Value>
+        <Description>Hadoop home directory</Description>
+    </hadoopHome>
+     <hadoopConfFolder>
+        <Type>String</Type>
+        <Value>/usr/local/hadoop/etc/hadoop/</Value>
+        <Description>Hadoop conf directory</Description>
+    </hadoopConfFolder>
+    <MosekLogPath>
+	 <Type>String</Type>
+        <Value>/home/hduser/log/Mosek/</Value>
+        <Description>Hadoop conf directory</Description>
+    </MosekLogPath>
+    <jobLog>
+        <Type>String</Type>
+        <Value>/home/hduser/log/jobresult.log</Value>
+        <Description>Job log file location.</Description>
+    </jobLog>
+    <jobDescriptionFile>
+        <Type>String</Type>
+        <Value>/home/hduser/log/jobSet.txt</Value>
+        <Description>Job profile desciption file location.</Description>
+    </jobDescriptionFile>
+       <jobResultFile>
+        <Type>String</Type>
+        <Value>/home/hduser/log/result.txt</Value>
+        <Description>File that stores the final result.</Description>
+    </jobResultFile>
+ <jobClasses>
+        <Type>String</Type>
+        <Value>org.apache.hadoop.jobs.Classification
+org.apache.hadoop.jobs.HistogramMovies
+org.apache.hadoop.jobs.HistogramRatings
+org.apache.hadoop.jobs.InvertedIndex
+org.apache.hadoop.jobs.SelfJoin
+org.apache.hadoop.jobs.SequenceCount
+org.apache.hadoop.jobs.WordCount
+org.apache.hadoop.jobs.terasort.TeraGen</Value>
+        <Description>Job classes that will be used.</Description>
+    </jobClasses>
+	<jobJarFilePath>
+                <Type>String</Type>
+                <Value>/home/hduser/workspace/HadoopPlugin/lib/jobs.jar</Value>
+		<Description>File path that points to the jar file of jobs.</Description>
+        </jobJarFilePath>
+
+	<utilityFunction>
+                <Type>Integer</Type>
+                <Value>0</Value>
+                <Description>The type of job utility function. 1 = Linear, 0 = Sigmoid</Description>
+        </utilityFunction>
+
+<HardDeadlinePercentage>
+                <Type>Double</Type>
+                <Value>0.2</Value>
+                <Description>Percentage of hard deadline jobs.</Description>
+        </HardDeadlinePercentage>
+
+<SoftDeadlinePercentage>
+                <Type>Double</Type>
+                <Value>0.6</Value>
+                <Description>Percentage of soft deadline jobs.</Description>
+        </SoftDeadlinePercentage>
+</Constant>
